@@ -1,1 +1,2 @@
 Phase 1: data managment seprate is good practive as it means each class can only focus on one main thing. For example, GameTicker will only store and retrave updates. It wont worry about what to do with them, only where they are.
+Phase 2: The interfaces decoupple the notification system by having the sibject communicate with Oberver class isntead of a spesific class. the subject only knows what it needs from the observer update method.

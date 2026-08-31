@@ -1,18 +1,22 @@
 import java.util.ArrayList;
 
-public class GameTicker{
+public class GameTicker {
+
     private ArrayList<String> updates;
 
-    public GameTicker(){
+    public GameTicker() {
         updates = new ArrayList<>();
     }
-    public void addUpdate(String update){
-        updates.add(update);
+
+    public void addUpdate(String text) {
+        updates.add(text);
     }
-    public String getLatestUpdate(){
-        if (updates.isEmpty()){
-            return "";
+
+    public String getLatestUpdate() {
+        if (updates.isEmpty()) {
+            return null;
         }
-        return updates.get(updates.size()-1);
+
+        return updates.get(updates.size() - 1);
     }
 }
