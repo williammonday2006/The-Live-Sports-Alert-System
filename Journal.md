@@ -1,3 +1,4 @@
-Phase 1: data managment seprate is good practive as it means each class can only focus on one main thing. For example, GameTicker will only store and retrave updates. It wont worry about what to do with them, only where they are.
-Phase 2: The interfaces decoupple the notification system by having the sibject communicate with Oberver class isntead of a spesific class. the subject only knows what it needs from the observer update method.
-Phase 3: notifyObservers method loops through the list and calls update on all of them. the lis looks for any with the Observer class so a veriaty of scripts can use it without hardcoding a list that may or may not need to change.
+Phase 1: data management separate is good practice as it means each class can only focus on one main thing. For example, GameTicker will only store and retrave updates. It wont worry about what to do with them, only where they are.
+Phase 2: The interfaces decouple the notification system by having the subject communicate with Observer class instead of a specific class. the subject only knows what it needs from the observer update method.
+Phase 3: notifyObservers method loops through the list and calls update on all of them. the lis looks for any with the Observer class so a verity of scripts can use it without hardcoding a list that may or may not need to change.
+Phase 4: im using pull for data sending. when gameticker calls observer.update it doesn't send the update as an argument. Each observer has a reference to GameTicker and calls getLatestUpdate to grab the data.
